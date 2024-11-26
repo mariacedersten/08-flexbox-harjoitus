@@ -6,7 +6,8 @@ html {
 body {
   font-family: "Gotham", Arial, Helvetica, sans-serif;
   background-color: darkcyan;
-  padding: 10px;
+  padding: 1rem;
+  font-size: 1.6rem;
 }
 /* vanhemman säännöt: LAPSET FLEXATAAN */
 .wrapper {
@@ -14,24 +15,19 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
 }
-
 /* lapsien säännöt*/
 .wrapper > * {
-  padding: 10px;
+  padding: 1rem;
   flex-grow: 1;
   flex-basis: 100%;
 }
-
-.header {
-  background-color: gold;
+/* main navigointi */
+.wrapper .main-nav {
+  padding: 0rem;
 }
-
-.main-nav {
-  background-color: azure;
-}
-
-.main {
-  background-color: darkorange;
+.main-nav ul li {
+  background-color: aliceblue;
+  border: grey 1px solid;
 }
 
 .main-nav ul {
@@ -39,38 +35,50 @@ body {
   flex-direction: row;
   flex-wrap: nowrap;
 }
-
-.main-nav {
-  padding: 0%;
-}
 .main-nav ul > * {
   flex-grow: 1;
   flex-basis: 0;
   text-align: center;
+  padding: 1rem;
 }
-.main-nav ul li {
-  border: solid 5px darkgreen;
-  padding: 10px;
+.header {
+  background-color: gold;
 }
-
+.main-nav {
+  background-color: azure;
+}
+.main {
+  background-color: darkorange;
+  padding: 0;
+}
+p {
+  margin: 1rem;
+}
 .aside-1 {
   background-color: mediumseagreen;
 }
-
 .aside-2 {
   background-color: seagreen;
 }
-
 .footer {
   background-color: lightgreen;
 }
-
+/* some-navigointi */
+.facebook {
+  background-color: darkblue;
+}
+.twitter {
+  background-color: lightblue;
+}
+.email {
+  background-color: grey;
+}
 .some-nav ul {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  color: aliceblue;
 }
-
 .some-nav ul > * {
   flex-grow: 1;
   flex-basis: 0;
@@ -78,49 +86,16 @@ body {
   padding: 1rem;
 }
 
-.some-nav ul .facebook {
-  background-color: blue;
-}
-
-.some-nav .icon {
-  fill: white;
-  width: 2.5rem;
-  display: inline-block;
-}
-.some-nav {
-  margin: 47rem -1rem -1rem -1rem;
-}
-
-.some-nav ul .facebook {
-  background-color: #4267b2;
-}
-.some-nav ul .email {
-  background-color: grey;
-}
-.some-nav ul .twitter {
-  background-color: #1c9bef;
-}
-.twitter .icon {
-  fill: white;
-  width: 2.5rem;
-  display: inline-block;
-}
-li {
-  padding: 0;
-}
-
 /* Tablet-näkymä säännöt */
 @media only screen and (min-width: 426px) {
-  body {
+  /*ody {
     background-color: lightblue;
-  }
+  }*/
   .wrapper .aside-1,
   .wrapper .aside-2 {
     flex-basis: auto;
   }
-  /*.wrapper {
-    flex-direction: row;
-  }
+  /*
   .aside-1 {
     flex-basis: auto;
   }
@@ -128,18 +103,18 @@ li {
     flex-basis: auto;
   }*/
 }
-
+/* Desktop-näkymä säännöt */
 @media only screen and (min-width: 769px) {
-  body {
+  /*body {
     background-color: lightcoral;
-  }
+  }*/
   .wrapper .aside-1 {
     order: 1;
   }
   .wrapper .main {
     flex-basis: 0;
     order: 2;
-    flex-grow: 2;
+    flex-grow: 400;
   }
   .wrapper .aside-2 {
     order: 3;
